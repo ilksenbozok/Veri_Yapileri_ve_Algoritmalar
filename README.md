@@ -6,15 +6,17 @@ Proje 1
   
 Yukarı verilen dizinin sort türüne göre aşamaları:  
   
-Verilen örüntüye ait en küçük elemanı buluyor ve en baştaki sayı ile yer değiştiriyor.  
-[2,27,16,22,18,6] n   
-İkinci en küçük elemanı buluyor ve 2. sıra ile değiştiriyor.  
-[2,6,16,22,18,27] n-1  
-Üçüncü sıradaki en küçük o yüzden dokunmuyoruz ve 4.sıradaki elamana geçiliyor.  
-Dördüncü en küçük elemanı buluyor ve 4. sıra ile değiştiriyor.   
-[2,6,16,18,22,27] n-2  
-5. ve 6. sıradaki elamanlar sıralı, o yüzden sort işlemi tamamlanmış oluyor.  
-  
+1.aşama: Dizinin ikinci elemanı başlangıç elemanı olarak seçilir.Daha sonra ilk elemanla kıyaslanır, 22<27 olduğu için dizinin sırası değişmez.     
+[22,27,16,2,18,6]  
+2.aşama: Şimdi de üçünkü eleman ilk iki elemanla kıyaslanır, 16<22 ve 16<27 olduğundan üçüncü eleman en başa alınır ve sayılar sırasına göre kaydırılır.    
+[16,22,27,2,18,6]  
+3.aşama: Bu adımda da sıra dördüncü eleman yani 2 sayısına bakmaya gelmiştir.2 hepsinden küçük olduğu için direk en sola en başa yerleşir.Diğer sayılarda birer sağa kayarak kendi sırasını alır.  
+[2,16,22,27,18,6]  
+4.aşama: Bu adımda sıralanmak üzere bakılacak indis değeri beştir.Yani karşılığında bulunan eleman 18'dir.18 sayısı solundaki 2,16,22,27 ile kontrol edilir ve kendi yerine araya girerek dizinin aşağıdaki halini oluşturur.  
+[2,16,18,22,27,6]  
+5.aşama: Bu adımı son adım olarak düşünebiliriz. Burada da dizinin altıncı indis değerinde bulunan eleman olan 6 kontrol edilir. 6<16, 6<18 6<22 olduğu için araya girerek kendisine ait olan sırasında yerini alır.Dizinin son hali:  
+[2,6,16,18,22,27]  
+    
 Big-O Gösterimi : O(n²)  
   
 Dizi sıralandıktan sonra 18 sayısı Average case (Aradığımız sayının ortada olması) kapsamına girer.  
